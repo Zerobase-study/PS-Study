@@ -3,7 +3,7 @@ let recursive = function (p){
   if(p === '') return '';
   // 사용할 함수를 초기화
   let left = 0, right = 0, i = 0;
-  let stack = [];
+  let arr = [];
   let fix = '';
   // 균형이 맞을때까지 반복
   while(1){
@@ -11,23 +11,23 @@ let recursive = function (p){
     let now = p[i++]; 
     // 여는 괄호면 left 증가 닫는 괄호면 right증가 
     now === '(' ? left++ : right++;
-    stack.push(now);
+    arr.push(now);
     // 균형잡히면 반복문 탈출
     if(left === right) break;
   }
 
   // 균형이 깨졌다면 현재 문자를 놔두고 뒤쪽으로 진행 (재귀)
-  if(stack[0] === ')'){
+  if(arr[0] === ')'){
     fix += `(${recursive(p.slice(i))})`;
     // 방향 전환
-    for(let j = 1; j < stack.length-1; j++){
-      stack[j] === '(' ? fix += ')' : fix += '(';
+    for(let j = 1; j < arr.length-1; j++){
+      arr[j] === '(' ? fix += ')' : fix += '(';
     }
     return fix;
   }
 
-  // 균형이 맞다면 stack을 문자열로 만들고 나머지를 재귀
-  fix += stack.join('') + recursive(p.slice(i));
+  // 균형이 맞다면 arr을 문자열로 만들고 나머지를 재귀
+  fix += arr.join('') + recursive(p.slice(i));
   return fix;
 }
 
