@@ -37,8 +37,8 @@ function solution(p) {
     const reversedU = u
       .slice(1, -1)
       .split("")
-      .map((str) => {
-        return str === "(" ? ")" : "(";
+      .map((char) => {
+        return char === "(" ? ")" : "(";
       })
       .join("");
     return `(${solution(v)})${reversedU}`;
