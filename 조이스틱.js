@@ -8,6 +8,10 @@ const cursor = function (arr) {
     }
 
     min = Math.min(min, i * 2 + arr.length - next);
+
+    if (next === arr.length) {
+      min = Math.min(min, i);
+    }
   }
 
   return min;
