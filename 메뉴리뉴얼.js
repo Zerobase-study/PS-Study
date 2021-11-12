@@ -1,4 +1,7 @@
 // 메뉴리뉴얼
+// orders = ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"];
+// courses = [2,3,4];
+
 function solution(orders, courses) {
   const getCombination = function (arr, num) {
     const combinations = [];
@@ -15,6 +18,7 @@ function solution(orders, courses) {
 
   let menu = [];
 
+  // key: 'AC' , value: 4
   courses.forEach((course) => {
     const orderDict = {};
     for (let order of orders) {
