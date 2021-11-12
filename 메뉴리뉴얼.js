@@ -1,3 +1,4 @@
+// 메뉴리뉴얼
 function solution(orders, courses) {
   const getCombination = function (arr, num) {
     const combinations = [];
