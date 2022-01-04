@@ -14,8 +14,8 @@ function findMaze(row, col, str) {
     }
 
     for (let i = 0; i < 4; i++) {
-      let nx = x + dx[i];
-      let ny = y + dy[i];
+      const nx = x + dx[i];
+      const ny = y + dy[i];
       if (nx >= 0 && ny >= 0 && nx < row && ny < col && visited[nx][ny] === 0 && map[nx][ny] === 1) {
         visited[nx][ny] = 1;
         dfs(index + 1, nx, ny, visited);
@@ -30,3 +30,5 @@ function findMaze(row, col, str) {
 }
 
 console.log(findMaze(4, 6, '101111 101010 101011 111011'));
+console.log(findMaze(2, 25, '1011101110111011101110111 1110111011101110111011101'));
+console.log(findMaze(7, 7, '1011111 1110001 1000001 1000001 1000001 1000001 1111111'));

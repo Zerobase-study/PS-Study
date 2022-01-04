@@ -6,16 +6,16 @@ function findMaze(row, col, str) {
   const dy = [0, 0, 1, -1];
 
   const bfs = (x, y, visited) => {
-    let queue = [];
+    const queue = [];
     queue.push([x, y]);
     visited[x][y] = 1;
-
+    
     while (queue.length) {
-      let [px, py] = queue.shift();
-
+      const [px, py] = queue.shift();
+      
       for (let i = 0; i < 4; i++) {
-        let nx = px + dx[i];
-        let ny = py + dy[i];
+        const nx = px + dx[i];
+        const ny = py + dy[i];
         if (nx >= 0 && ny >= 0 && nx < row && ny < col && visited[nx][ny] === 0 && map[nx][ny] === 1) {
           visited[nx][ny] = visited[px][py] + 1;
           queue.push([nx, ny]);
@@ -29,3 +29,7 @@ function findMaze(row, col, str) {
 }
 
 console.log(findMaze(4, 6, '101111 101010 101011 111011'));
+console.log(findMaze(2, 25, '1011101110111011101110111 1110111011101110111011101'));
+console.log(findMaze(7, 7, '1011111 1110001 1000001 1000001 1000001 1000001 1111111'));
+
+
