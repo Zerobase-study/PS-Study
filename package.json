@@ -1,0 +1,28 @@
+{
+  "name": "ps-study",
+  "version": "1.0.0",
+  "description": "- [fork받아 PR날리는 방법](https://github.com/2heeesss/TIL/blob/master/git/git%20%EC%82%AC%EC%9A%A9%EB%B2%95%20%EC%A0%95%EB%A6%AC.md)\r - 문제는 프로그래머스 2단계로 설정합니다.",
+  "main": "20220103미로탐색.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsyuna/PS-Study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsyuna/PS-Study/issues"
+  },
+  "homepage": "https://github.com/itsyuna/PS-Study#readme",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "2.5.1"
+  }
+}
