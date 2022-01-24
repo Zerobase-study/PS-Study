@@ -18,9 +18,10 @@ const levelOrder = function (root) {
   if (!root) return [];
 
   while (queue.length > 0) {
+    const sizeOfQueue = queue.length;
     const level = [];
 
-    for (let i = 0; i < queue.length; i++) {
+    for (let i = 0; i < sizeOfQueue; i++) {
       const current = queue.shift();
 
       if (current.left !== null) queue.push(current.left);
