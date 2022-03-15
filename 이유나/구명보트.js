@@ -6,12 +6,12 @@ function solution(people, limit) {
     for (let i = ascedingOrder.length - 1; i >= 0; i--) {
       let j = 0;
       if (ascedingOrder[i] + ascedingOrder[j] <= limit) {
-        ascedingOrder.pop(ascedingOrder[i]);
-        ascedingOrder.shift(ascedingOrder[j]);
+        ascedingOrder.pop();
+        ascedingOrder.shift();
         j++;
         i--;
       } else {
-        ascedingOrder.pop(ascedingOrder[i]);
+        ascedingOrder.pop();
       }
       count++;
     }

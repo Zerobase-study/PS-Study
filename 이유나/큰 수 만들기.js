@@ -5,7 +5,7 @@ function solution(number, k) {
   for (let i = 0; i < number.length; i++) {
     while (stack.length > 0 && count > 0) {
       if (number[i] > stack[stack.length - 1]) {
-        stack.pop(number[i]);
+        stack.pop();
         count -= 1;
       } else break;
     }
