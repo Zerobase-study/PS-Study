@@ -1,17 +1,17 @@
 function solution(people, limit) {
-  const ascedingOrder = people.sort((a, b) => a - b);
+  const ascendingOrder = people.sort((a, b) => a - b);
   let count = 0;
 
-  while (ascedingOrder.length > 0) {
-    for (let i = ascedingOrder.length - 1; i >= 0; i--) {
+  while (ascendingOrder.length > 0) {
+    for (let i = ascendingOrder.length - 1; i >= 0; i--) {
       let j = 0;
-      if (ascedingOrder[i] + ascedingOrder[j] <= limit) {
-        ascedingOrder.pop();
-        ascedingOrder.shift();
+      if (ascendingOrder[i] + ascendingOrder[j] <= limit) {
+        ascendingOrder.pop();
+        ascendingOrder.shift();
         j++;
         i--;
       } else {
-        ascedingOrder.pop();
+        ascendingOrder.pop();
       }
       count++;
     }
